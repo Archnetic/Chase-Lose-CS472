@@ -7,11 +7,17 @@ Project 1:
   prompt> diff tests/2.out tests-out/2.out
 
 
-Project 3:
--10 test 3 incorrect
-[31mtest 3: err incorrect[0m
-  what results should be found in file: tests/3.err
-  what results produced by your program: tests-out/3.err
-  compare the two using diff, cmp, or related tools to debug, e.g.:
-  prompt> diff tests/3.err tests-out/3.err
+Project 4:
+-50 The ratio for ticks-used is not close enough to the ratio of tickets
+$ spin 3 100000000 &;spin 9 100000000 &
+$tickets: 1 	 pid: 11 	 ticks-used: 1
+tickets: 1 	 pid: 10 	 ticks-used: 2
+ tickets: 1 	 pid: 11 	 ticks-used: 0
+tickets: 1 	 pid: 10 	 ticks-used: 2
+tickets: 9 	 pid: 11 	 ticks-used: 1104
+tickets: 3 	 pid: 10 	 ticks-used: 345
+zombie!
+tickets: 3 	 pid: 10 	 ticks-used: 1155
+zombie!
 
+ratio should be 1:3, the ratio for ticks-used is either 3.2 or 3.3478
