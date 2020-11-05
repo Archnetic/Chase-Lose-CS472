@@ -1,0 +1,20 @@
+Chase Lose
+
+Files edited:
+proc.c
+usys.h
+mprotect.c
+munprotect.c
+syscall files
+
+1: 2 new system calls made for protect and unprotect
+
+2. Created 2 new files called protect.c and unprotect.c
+
+3. In protect if assert fails it will kill the ppid. protect also kill when start = 2 instead of one. In the mean time assert will call mprotect on start.
+
+4. In unprotect we do something similar but run it with multiple iterations
+
+Null1 and readonlycode2 I do not believe work properly.
+
+
